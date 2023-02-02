@@ -1,0 +1,43 @@
+.container {
+  @apply relative
+  bg-gradient-to-t from-yellow-500 to-blue-500;
+
+  .arrowPrev {
+    transform: translateY(50%);
+    @apply absolute left-1 top-[50%] z-[20];
+
+    svg {
+      @apply stroke-[#fff] w-8 transition-colors;
+
+      &:hover {
+        @apply stroke-gray-300;
+      }
+    }
+  }
+  .arrowNext {
+    transform: translateY(50%);
+    @apply absolute right-1 top-[50%] z-[20];
+
+    svg {
+      @apply stroke-[#fff] w-8 transition-colors;
+
+      &:hover {
+        @apply stroke-gray-300;
+      }
+    }
+  }
+
+  .reviewBlock {
+    @apply relative h-[300px] w-full px-[40px]
+    text-[#fff] text-base sm:text-lg
+    flex justify-center items-center;
+
+    p {
+      @apply font-semibold mb-[30px];
+    }
+
+    h1 {
+      @apply text-xl font-bold;
+    }
+  }
+}
