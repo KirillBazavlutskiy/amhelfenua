@@ -1,12 +1,13 @@
 import {FC} from 'react';
 import s from './SuggestBlockText.module.scss';
 import Logo from '../../../assets/Logo/Logo-full.png'
+import Image from "next/image";
 
 const SuggestBlockText: FC = () => {
     return (
         <div className={s.container}>
             <div className={s.logo}>
-                <img src={Logo} alt="LOGO"/>
+                <Image src={Logo} alt="LOGO"/>
             </div>
             <p>
                 Багато українців втратили свої домівки, тисячі мирних жителів були вбиті,

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
@@ -10,6 +10,7 @@ import Help3 from '../../assets/Slider/3.png';
 import Help4 from '../../assets/Slider/4.png';
 import Help5 from '../../assets/Slider/5.png';
 import Help6 from '../../assets/Slider/6.png';
+import Image from "next/image";
 
 interface CitiesBlockProps {
 	children: React.ReactNode | null;
@@ -50,22 +51,22 @@ const CitiesBlock: FC<CitiesBlockProps> = ({children}) => {
 				showIndicators={false}
 			>
 				<div className={s.cityBlock}>
-					<img src={Help1} alt='HELP' />
+					<Image src={Help1} alt='HELP' />
 				</div>
 				<div className={s.cityBlock}>
-					<img src={Help2} alt='HELP' />
+					<Image src={Help2} alt='HELP' />
 				</div>
 				<div className={s.cityBlock}>
-					<img src={Help3} alt='HELP' />
+					<Image src={Help3} alt='HELP' />
 				</div>
 				<div className={s.cityBlock}>
-					<img src={Help4} alt='HELP' />
+					<Image src={Help4} alt='HELP' />
 				</div>
 				<div className={s.cityBlock}>
-					<img src={Help5} alt='HELP' />
+					<Image src={Help5} alt='HELP' />
 				</div>
 				<div className={s.cityBlock}>
-					<img src={Help6} alt='HELP' />
+					<Image src={Help6} alt='HELP' />
 				</div>
 			</Carousel>
 			<div className={s.grayBG}/>

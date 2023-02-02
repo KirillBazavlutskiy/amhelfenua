@@ -3,6 +3,7 @@ import { FC, useState } from 'react';
 import s from './Header.module.scss';
 import logo from '../../assets/Logo/Logo-heart.ico';
 import {motion, useScroll} from "framer-motion";
+import Image from "next/image";
 
 const Header: FC = () => {
 	const [headerMenu, setHeaderMenu] = useState<boolean>(false);
@@ -28,7 +29,7 @@ const Header: FC = () => {
 			className={`${s.container} ${!backgroundTransparent && 'shadow-md'}`}
 		>
 			<div className={s.logo}>
-				<img src={logo} alt='LOGO' />
+				<Image src={logo} alt='LOGO' />
 				<p>AMHELFENUA</p>
 			</div>
 			<div className={s.navbar}>
