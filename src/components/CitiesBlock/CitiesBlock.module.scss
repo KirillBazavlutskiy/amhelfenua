@@ -1,0 +1,45 @@
+.container {
+	@apply relative;
+
+	.arrowPrev {
+		transform: translateY(50%);
+		@apply absolute left-1 top-[40%] z-[20];
+
+		svg {
+			@apply stroke-[#fff] w-8 transition-colors;
+
+			&:hover {
+				@apply stroke-gray-300;
+			}
+		}
+	}
+	.arrowNext {
+		transform: translateY(50%);
+		@apply absolute right-1 top-[40%] z-[20];
+
+		svg {
+			@apply stroke-[#fff] w-8 transition-colors;
+
+			&:hover {
+				@apply stroke-gray-300;
+			}
+		}
+	}
+
+	.cityBlock {
+		@apply relative h-[75vh] w-full flex justify-center items-center;
+
+		img {
+			@apply bg-center object-cover h-full;
+		}
+	}
+
+	.grayBG {
+		@apply absolute top-0 h-[75vh] w-full z-[10] bg-[rgba(0,0,0,0.5)];
+	}
+
+	.childrenBlock {
+		@apply absolute top-0 w-full h-[75vh]
+		flex justify-center items-end z-[15];
+	}
+}

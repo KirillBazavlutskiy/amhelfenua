@@ -1,0 +1,46 @@
+.container {
+  @apply max-w-[1300px] mx-auto p-[20px] py-[40px];
+
+  h1 {
+    @apply text-xl font-bold
+    text-left sm:text-center;
+  }
+
+  .helpSector {
+    @apply flex flex-col items-center my-5;
+
+    h2 {
+      @apply w-full text-xl font-semibold my-[30px]
+      text-left sm:text-center;
+    }
+
+    .helpTable {
+      @apply w-full grid grid-cols-1 mb-[20px]
+      sm:grid-cols-3 md:grid-cols-3 gap-[10px];
+
+      .helpObj {
+        @apply w-full h-[100px] p-[15px] transition-all
+        flex items-center justify-start gap-[20px];
+
+        svg {
+          @apply w-14 h-14;
+        }
+        p {
+          @apply text-base font-semibold text-left;
+        }
+
+        &:hover {
+          @apply bg-blue-500 text-[#fff];
+        }
+      }
+    }
+
+    button {
+      @apply bg-blue-500 mx-auto px-6 py-3 font-medium text-[#fff] transition-colors;
+
+      &:hover {
+        @apply bg-yellow-400 text-[#000];
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.container {
+  @apply w-full bg-[rgba(243,244,246,0.8)] text-[#000] p-[20px]
+  flex flex-col text-center items-center gap-[15px];
+
+  h1 {
+    @apply text-lg font-semibold;
+  }
+
+  button {
+    @apply bg-blue-500 px-4 py-3 font-medium text-[#fff] transition-all;
+
+    &:hover {
+      @apply bg-yellow-400 text-[#000];
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.container {
+  @apply text-[#fff] max-w-[800px] p-4 text-center
+  flex flex-col items-center gap-[20px];
+
+  .logo {
+    @apply w-[200px] h-[200px] bg-[#fff] rounded-full p-4
+    flex justify-center items-center;
+    img {
+      @apply w-[120px];
+    }
+  }
+
+  p {
+    &:nth-child(2) {
+      @apply text-[20px] font-semibold;
+    }
+    &:nth-child(3) {
+      @apply text-[22px] font-bold;
+    }
+  }
+
+  button {
+    @apply bg-blue-500 px-5 py-4
+    font-medium text-[#fff] transition-all;
+
+    &:hover {
+      @apply bg-yellow-400 text-[#000] px-10;
+    }
+  }
+}
