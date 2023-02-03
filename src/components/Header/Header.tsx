@@ -4,6 +4,7 @@ import s from './Header.module.scss';
 import logo from '../../assets/Logo/Logo-heart.ico';
 import {motion, useScroll} from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const Header: FC = () => {
 	const [headerMenu, setHeaderMenu] = useState<boolean>(false);
@@ -34,8 +35,8 @@ const Header: FC = () => {
 			</div>
 			<div className={s.navbar}>
 				<div className={s.navigation}>
-					<a href='#'>Головна</a>
-					<a href='#'>Контакти</a>
+					<Link href='/'>Головна</Link>
+					<Link href='/contacts'>Контакти</Link>
 				</div>
 				<div className={s.language}>
 					<p>Мова</p>

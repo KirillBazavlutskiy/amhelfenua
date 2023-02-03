@@ -1,6 +1,5 @@
 .container {
-  @apply relative
-  bg-gradient-to-t from-yellow-500 to-blue-500;
+  @apply relative bg-[#212529];
 
   .arrowPrev {
     transform: translateY(50%);
@@ -28,16 +27,20 @@
   }
 
   .reviewBlock {
-    @apply relative h-[300px] w-full px-[40px]
+    @apply relative h-auto min-h-[400px] w-full px-[50px]
     text-[#fff] text-base sm:text-lg
-    flex justify-center items-center;
+    flex flex-col justify-center items-center gap-[20px];
 
     p {
-      @apply font-semibold mb-[30px];
+      @apply font-semibold;
     }
 
     h1 {
       @apply text-xl font-bold;
+    }
+
+    .stars {
+      @apply flex gap-1
     }
   }
 }

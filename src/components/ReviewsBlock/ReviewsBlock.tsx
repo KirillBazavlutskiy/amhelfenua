@@ -24,7 +24,7 @@ const Reviews: Review[] = [
         text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis " +
             "praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias " +
             "excepturi sint occaecati cupiditate non provident.",
-        score: 5
+        score: 4
     },
     {
         name: "Юлія",
@@ -67,22 +67,34 @@ const ReviewsBlock = () => {
                 renderArrowPrev={arrowPrev}
                 renderArrowNext={arrowNext}
 
-                axis='horizontal'
                 autoPlay={true}
                 infiniteLoop={true}
-                showThumbs={true}
+                showThumbs={false}
                 showStatus={false}
-                showIndicators={false}
+                showIndicators={true}
             >
                 {
-                    Reviews.map(e => (
-                        <div className={s.reviewBlock}>
-                            <div className={s.reviewText}>
+                    Reviews.map((e, index ) => {
+                        const stars: React.ReactNode[] = [];
+                        for (let i = 0; i < e.score; i++) {
+                            stars.push(
+                                <div key={i}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                                        <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
+                                    </svg>
+                                </div>
+                            )
+                        }
+                        return (
+                            <div key={index} className={s.reviewBlock}>
                                 <p>{e.text}</p>
                                 <h1>{e.name}</h1>
+                                <div className={s.stars}>
+                                    {stars}
+                                </div>
                             </div>
-                        </div>
-                    ))
+                        )
+                    })
                 }
             </Carousel>
         </div>
