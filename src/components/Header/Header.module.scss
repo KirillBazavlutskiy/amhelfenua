@@ -17,7 +17,7 @@
 	}
 
 	.navbar {
-		@apply flex gap-[20px] text-base items-center;
+		@apply hidden lg:flex gap-[20px] text-base items-center;
 
 		.navigation {
 			@apply flex gap-[20px];
@@ -44,5 +44,52 @@
 				@apply bg-yellow-400 text-[#000];
 			}
 		}
+	}
+
+	.burger {
+		@apply block lg:hidden
+		w-[40px] h-[30px] transition-colors
+		flex flex-col justify-between;
+
+		.slice {
+			@apply w-full h-[2px] rounded-full;
+		}
+	}
+
+	.slice1.slice-enter-active {
+		animation: rotateDown ease .2s;
+	}
+	.slice2.slice-enter-active {
+		animation: hide ease .2s;
+	}
+	.slice3.slice-enter-active {
+		animation: rotateUp ease .2s;
+	}
+}
+
+@keyframes rotateDown {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(45deg);
+	}
+}
+
+@keyframes rotateUp {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(-45deg);
+	}
+}
+
+@keyframes hide {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(200%);
 	}
 }

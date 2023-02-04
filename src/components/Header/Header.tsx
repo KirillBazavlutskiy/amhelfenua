@@ -1,13 +1,17 @@
-import { FC, useState } from 'react';
+import {FC, useRef, useState} from 'react';
+
+import { CSSTransition } from 'react-transition-group';
+import {motion, useScroll} from "framer-motion";
 
 import s from './Header.module.scss';
 import logo from '../../assets/Logo/Logo-heart.ico';
-import {motion, useScroll} from "framer-motion";
+
 import Image from "next/image";
 import Link from "next/link";
 
 const Header: FC = () => {
 	const [headerMenu, setHeaderMenu] = useState<boolean>(false);
+	const slice = useRef(null);
 
 	const { scrollY } = useScroll()
 	const [backgroundTransparent, setBackgroundTransparent] = useState<boolean>(true);
@@ -43,6 +47,18 @@ const Header: FC = () => {
 				</div>
 				<button>Хочу допомогти</button>
 			</div>
+			<CSSTransition
+				in={headerMenu}
+				timeout={5000}
+				classNames={s.slice}
+				nodeRef={slice}
+			>
+				<div className={s.burger} onClick={() => setHeaderMenu(prev => !prev)}>
+					<div ref={slice} className={`${s.slice} + ${s.slice1} + ${backgroundTransparent ? "bg-[#fff]" : "bg-[#000]"}`} />
+					<div ref={slice} className={`${s.slice} + ${s.slice2} + ${backgroundTransparent ? "bg-[#fff]" : "bg-[#000]"}`} />
+					<div ref={slice} className={`${s.slice} + ${s.slice3} + ${backgroundTransparent ? "bg-[#fff]" : "bg-[#000]"}`} />
+				</div>
+			</CSSTransition>
 		</motion.header>
 	);
 };
