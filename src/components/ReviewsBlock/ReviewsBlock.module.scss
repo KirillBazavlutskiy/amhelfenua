@@ -27,7 +27,7 @@
   }
 
   .reviewBlock {
-    @apply relative h-auto min-h-[400px] w-full px-[50px]
+    @apply relative h-auto min-h-[400px] w-full px-[50px] py-[35px]
     text-[#fff] text-base sm:text-lg
     flex flex-col justify-center items-center gap-[20px];
 

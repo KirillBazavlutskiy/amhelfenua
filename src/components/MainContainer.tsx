@@ -1,6 +1,7 @@
 import React, {FC} from "react";
 import Head from "next/head";
 import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 interface MainContainerProps {
     children: React.ReactNode | null;
@@ -20,6 +21,7 @@ const MainContainer: FC<MainContainerProps> = ({ children, keywords , title}) =>
             <div>
                 {children}
             </div>
+            <Footer />
         </>
     );
 };

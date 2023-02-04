@@ -1,0 +1,59 @@
+.container {
+  @apply bg-[#212529] text-[#fff] flex items-center gap-[20px] p-[20px]
+  flex-col lg:flex-row
+  border-t-[1px] border-t-[#000];
+
+  .links {
+    @apply w-full lg:w-1/5 flex flex-col justify-center items-center gap-[30px];
+
+    .logo {
+      @apply w-[150px] h-[150px] bg-[#fff]
+      flex items-center justify-center rounded-full;
+
+      img {
+        @apply w-[90px];
+      }
+    }
+
+    .socialMedia {
+      @apply flex gap-[10px];
+
+      a {
+        @apply w-[50px] h-[50px] bg-[#fff] rounded-full transition-colors
+        flex items-center justify-center;
+
+        img {
+          @apply w-[30px] h-[30px];
+        }
+
+        &:hover {
+          @apply bg-blue-100;
+        }
+      }
+    }
+  }
+
+  .copyrights {
+    @apply w-full lg:w-3/5 flex flex-col;
+
+    h1 {
+      @apply text-xl font-semibold mb-[20px];
+    }
+
+    a {
+      @apply text-base font-semibold transition-colors mb-[15px];
+
+      &:hover {
+        @apply text-yellow-500;
+      }
+    }
+  }
+
+  .callUs {
+    @apply w-auto;
+    .phoneNum {
+      @apply p-[20px] bg-[#FFC107]
+      flex items-center gap-[15px];
+    }
+  }
+}
