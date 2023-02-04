@@ -1,4 +1,4 @@
-import {FC, useRef, useState} from 'react';
+import {FC, useEffect, useRef, useState} from 'react';
 
 import { CSSTransition } from 'react-transition-group';
 import {motion, useScroll} from "framer-motion";
@@ -8,6 +8,7 @@ import logo from '../../assets/Logo/Logo-heart.ico';
 
 import Image from "next/image";
 import Link from "next/link";
+import HeaderMenu from "@/components/Header/HeaderMenu/HeaderMenu";
 
 interface HeaderProps {
 	transparent: boolean;
@@ -21,7 +22,7 @@ const Header: FC<HeaderProps> = ({ transparent }) => {
 	const [backgroundTransparent, setBackgroundTransparent] = useState<boolean>(transparent);
 
 	scrollY.onChange((val) => {
-		if (val > 20 || !transparent) {
+		if (val > 0 || !transparent || headerMenu) {
 			setBackgroundTransparent(false);
 		} else {
 			setBackgroundTransparent(true);
@@ -29,41 +30,39 @@ const Header: FC<HeaderProps> = ({ transparent }) => {
 	})
 
 	return (
-		<motion.header
-			style={{ backgroundColor: backgroundTransparent ? 'transparent' : 'white',
-					color: backgroundTransparent ? 'white' : 'black'}}
-			initial={{ backgroundColor: 'transparent', color: 'white' }}
-			animate={{ backgroundColor: backgroundTransparent ? 'transparent' : 'white',
+		<>
+			<motion.header
+				style={{
+					backgroundColor: backgroundTransparent ? 'transparent' : 'white',
+					color: backgroundTransparent ? 'white' : 'black',
+				}}
+				initial={{ backgroundColor: 'transparent', color: 'white' }}
+				animate={{ backgroundColor: backgroundTransparent ? 'transparent' : 'white',
 					color: backgroundTransparent ? 'white' : 'black' }}
-			className={`${s.container} ${!backgroundTransparent && 'shadow-md'}`}
-		>
-			<div className={s.logo}>
-				<Image src={logo} alt='LOGO' />
-				<p>AMHELFENUA</p>
-			</div>
-			<div className={s.navbar}>
-				<div className={s.navigation}>
-					<Link href='/'>Головна</Link>
-					<Link href='/'>Контакти</Link>
-				</div>
-				<div className={s.language}>
-					<p>Мова</p>
-				</div>
-				<button>Хочу допомогти</button>
-			</div>
-			<CSSTransition
-				in={headerMenu}
-				timeout={5000}
-				classNames={s.slice}
-				nodeRef={slice}
+				className={`${s.container} ${!backgroundTransparent && 'shadow-md'} ${transparent ? 'fixed' : 'sticky'}`}
 			>
-				<div className={s.burger} onClick={() => setHeaderMenu(prev => !prev)}>
-					<div ref={slice} className={`${s.slice} + ${s.slice1} + ${backgroundTransparent ? "bg-[#fff]" : "bg-[#000]"}`} />
-					<div ref={slice} className={`${s.slice} + ${s.slice2} + ${backgroundTransparent ? "bg-[#fff]" : "bg-[#000]"}`} />
-					<div ref={slice} className={`${s.slice} + ${s.slice3} + ${backgroundTransparent ? "bg-[#fff]" : "bg-[#000]"}`} />
+				<div className={s.logo}>
+					<Image src={logo} alt='LOGO' />
+					<p>AMHELFENUA</p>
 				</div>
-			</CSSTransition>
-		</motion.header>
+				<div className={s.navbar}>
+					<div className={s.navigation}>
+						<Link href='/'>Головна</Link>
+						<Link href='/'>Контакти</Link>
+					</div>
+					<div className={s.language}>
+						<p>Мова</p>
+					</div>
+					<button>Хочу допомогти</button>
+				</div>
+				<div className={s.burger} onClick={() => setHeaderMenu(prev => !prev)}>
+					<div ref={slice} className={`${s.slice} ${s.slice1} ${headerMenu ? s.clicked : s.unclicked} ${backgroundTransparent ? "bg-[#fff]" : "bg-[#000]"}`} />
+					<div ref={slice} className={`${s.slice} ${s.slice2} ${headerMenu ? s.clicked : s.unclicked} ${backgroundTransparent ? "bg-[#fff]" : "bg-[#000]"}`} />
+					<div ref={slice} className={`${s.slice} ${s.slice3} ${headerMenu ? s.clicked : s.unclicked} ${backgroundTransparent ? "bg-[#fff]" : "bg-[#000]"}`} />
+				</div>
+			</motion.header>
+			<HeaderMenu menuActive={headerMenu} />
+		</>
 	);
 };
 

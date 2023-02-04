@@ -1,0 +1,23 @@
+.container {
+  @apply w-full fixed top-0 bg-gray-100 z-[18]
+  flex flex-col items-center justify-start pt-[80px] p-[20px];
+
+  a, button {
+    @apply w-full my-[20px] text-center
+    text-lg font-semibold transition-colors;
+
+    &:hover {
+      @apply text-blue-500;
+    }
+  }
+}
+
+.active {
+  transform: translateY(0);
+  transition: ease-out .2s;
+}
+
+.notActive {
+  transform: translateY(-100%);
+  transition: ease-out .2s;
+}

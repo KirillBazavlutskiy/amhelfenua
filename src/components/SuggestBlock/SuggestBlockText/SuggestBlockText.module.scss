@@ -12,10 +12,10 @@
 
   p {
     &:nth-child(2) {
-      @apply text-[20px] font-semibold;
+      @apply text-base md:text-xl font-semibold;
     }
     &:nth-child(3) {
-      @apply text-[22px] font-bold;
+      @apply text-base md:text-xl font-bold;
     }
   }
 

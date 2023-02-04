@@ -19,7 +19,7 @@ const MainContainer: FC<MainContainerProps> = ({ children, keywords , title, tra
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header transparent={transparentHeader} />
-            <div className={!transparentHeader ? "mt-[80px]" : ""}>
+            <div>
                 {children}
             </div>
             <Footer />
