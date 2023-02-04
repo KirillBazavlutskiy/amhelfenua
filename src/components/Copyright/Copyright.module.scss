@@ -1,0 +1,23 @@
+.container {
+	@apply px-[20px] pt-[10px] pb-[40px];
+
+	h1 {
+		@apply text-xl font-semibold mt-[20px] mb-[20px] text-center;
+	}
+
+	h4 {
+		@apply text-lg font-semibold mt-[20px] mb-[10px];
+	}
+
+	p {
+		@apply text-base font-normal my-[10px];
+	}
+
+	a {
+		@apply text-base font-semibold text-blue-400;
+	}
+
+	ul {
+		@apply list-disc list-inside;
+	}
+}

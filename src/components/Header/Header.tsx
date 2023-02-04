@@ -9,15 +9,19 @@ import logo from '../../assets/Logo/Logo-heart.ico';
 import Image from "next/image";
 import Link from "next/link";
 
-const Header: FC = () => {
+interface HeaderProps {
+	transparent: boolean;
+}
+
+const Header: FC<HeaderProps> = ({ transparent }) => {
 	const [headerMenu, setHeaderMenu] = useState<boolean>(false);
 	const slice = useRef(null);
 
 	const { scrollY } = useScroll()
-	const [backgroundTransparent, setBackgroundTransparent] = useState<boolean>(true);
+	const [backgroundTransparent, setBackgroundTransparent] = useState<boolean>(transparent);
 
 	scrollY.onChange((val) => {
-		if (val > 20) {
+		if (val > 20 || !transparent) {
 			setBackgroundTransparent(false);
 		} else {
 			setBackgroundTransparent(true);
@@ -40,7 +44,7 @@ const Header: FC = () => {
 			<div className={s.navbar}>
 				<div className={s.navigation}>
 					<Link href='/'>Головна</Link>
-					<Link href='/contacts'>Контакти</Link>
+					<Link href='/'>Контакти</Link>
 				</div>
 				<div className={s.language}>
 					<p>Мова</p>

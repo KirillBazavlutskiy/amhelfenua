@@ -1,7 +1,8 @@
 .container {
   @apply bg-[#212529] flex p-[20px] mt-[40px] gap-[20px]
   flex-col lg:flex-row
-  pr-[20px] lg:pr-0;
+  pr-[20px] lg:pr-0
+  pl-[20px] lg:pl-[60px];
 
   .contacts {
     @apply w-full lg:w-1/2

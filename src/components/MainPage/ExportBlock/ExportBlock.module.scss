@@ -1,6 +1,12 @@
 .container {
-  @apply w-full p-[20px]
+  @apply w-full px-[20px] my-[40px]
   flex flex-col items-start lg:items-center;
+
+  h1 {
+    @apply text-lg font-semibold
+    text-left lg:text-center
+    max-w-full lg:max-w-[800px];
+  }
 
   .partnersBlock {
     @apply w-full flex gap-[20px] my-[40px]
