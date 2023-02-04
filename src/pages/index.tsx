@@ -5,6 +5,7 @@ import CitiesBlockText from "@/components/CitiesBlock/CitiesBlockText/CitiesBloc
 import HelpBlock from "@/components/HelpBlock/HelpBlock";
 import MainContainer from "@/components/MainContainer";
 import ReviewsBlock from "@/components/ReviewsBlock/ReviewsBlock";
+import ServicesBlock from "@/components/ServicesBlock/ServicesBlock";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
             </CitiesBlock>
             <HelpBlock />
             <ReviewsBlock />
+            <ServicesBlock />
         </MainContainer>
     </>
   )

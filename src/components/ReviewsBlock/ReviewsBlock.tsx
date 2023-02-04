@@ -72,6 +72,7 @@ const ReviewsBlock = () => {
                 showThumbs={false}
                 showStatus={false}
                 showIndicators={true}
+                interval={5000}
             >
                 {
                     Reviews.map((e, index ) => {

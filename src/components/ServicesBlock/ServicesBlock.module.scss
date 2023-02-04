@@ -1,0 +1,30 @@
+.container {
+  @apply flex gap-[20px] py-[40px] px-[20px]
+  flex-col lg:flex-row;
+
+  .service {
+    @apply w-full lg:w-1/3 p-4 border-[2px] border-[#000] transition-all
+    flex flex-col justify-start items-start gap-[30px];
+
+    .head {
+      @apply w-auto lg:w-full gap-[30px] lg:gap-[0px]
+      h-[50px] flex justify-between items-center;
+
+      h1 {
+        @apply text-lg font-semibold;
+      }
+
+      svg {
+        @apply w-10 h-10;
+      }
+    }
+
+    p {
+      @apply text-base font-semibold;
+    }
+
+    &:hover {
+      @apply bg-blue-500 text-[#fff] border-transparent;
+    }
+  }
+}
