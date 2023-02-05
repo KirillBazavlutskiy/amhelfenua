@@ -43,10 +43,10 @@ const Header: FC<HeaderProps> = ({ transparent }) => {
 					color: backgroundTransparent ? 'white' : 'black' }}
 				className={`${s.container} ${!backgroundTransparent && 'shadow-md'} ${transparent ? 'fixed' : 'sticky'}`}
 			>
-				<div className={s.logo}>
+				<Link href='/' className={s.logo}>
 					<Image src={logo} alt='LOGO' />
 					<p>AMHELFENUA</p>
-				</div>
+				</Link>
 				<div className={s.navbar}>
 					<div className={s.navigation}>
 						<Link href='/'>Головна</Link>
