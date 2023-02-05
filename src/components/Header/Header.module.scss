@@ -61,7 +61,7 @@
 		transition: ease-out .2s;
 	}
 	.slice2.clicked {
-		transform: translateX(200%);
+		opacity: 0;
 		transition: ease-out .2s;
 	}
 	.slice3.clicked {
@@ -74,7 +74,7 @@
 		transition: ease-out .2s;
 	}
 	.slice2.unclicked {
-		transform: translateX(0);
+		opacity: 1;
 		transition: ease-out .2s;
 	}
 	.slice3.unclicked {

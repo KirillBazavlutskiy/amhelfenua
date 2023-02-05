@@ -78,11 +78,11 @@ const PrivacyPolicyBlock = () => {
 				клієнти використовують Сайт — ви можете прочитати більше про те, як
 				Google використовує вашу Особисту інформацію тут:{' '}
 				<a href='https://www.google.com/intl/en/policies/privacy/'>
-					https://www.google.com/intl/en/policies/privacy/
+					https://www.google.com/.../privacy/
 				</a>{' '}
 				Ви також можете відмовитися від використання Google Analytics тут:{' '}
 				<a href='https://tools.google.com/dlpage/gaoptout'>
-					https://tools.google.com/dlpage/gaoptout
+					https://tools.googl.../gaoptout
 				</a>{' '}
 				Нарешті, ми також можемо передавати вашу Особисту інформацію для
 				дотримання чинного законодавства і нормативних актів, у відповідь на
@@ -97,7 +97,7 @@ const PrivacyPolicyBlock = () => {
 				про те, як працює цільова реклама, Ви можете відвідати освітню сторінку
 				Network Advertising Initiative (“NAI”) за адресою{' '}
 				<a href='http://www.networkadvertising.org/understanding-online-advertising/how-does-it-work'>
-					http://www.networkadvertising.org/understanding-online-advertising/how-does-it-work
+					http://www.networkadvertis/.../how-does-it-work
 				</a>
 				.
 			</p>
@@ -106,21 +106,18 @@ const PrivacyPolicyBlock = () => {
 				нижче посиланнями:
 			</p>
 			<p>
-				— Facebook:{' '}
 				<a href='https://www.facebook.com/settings/?tab=ads'>
-					https://www.facebook.com/settings/?tab=ads
+					— Facebook:{' '}
 				</a>
 			</p>
 			<p>
-				— Google:{' '}
 				<a href='https://www.google.com/settings/ads/anonymous'>
-					https://www.google.com/settings/ads/anonymous
+					— Google:{' '}
 				</a>
 			</p>
 			<p>
-				— Bing:{' '}
 				<a href='https://advertise.bingads.microsoft.com/en-us/resources/policies/personalized-ads'>
-					https://advertise.bingads.microsoft.com/en-us/resources/policies/personalized-ads
+					— Bing:{' '}
 				</a>
 			</p>
 			<p>– [[ВКЛЮЧИТИ ПОСИЛАННЯ НА ВІДМОВУ ВІД ВИКОРИСТОВУВАНИХ СЕРВІСІВ]].</p>
