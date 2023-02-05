@@ -29,6 +29,8 @@ const Header: FC<HeaderProps> = ({ transparent }) => {
 		}
 	})
 
+	useEffect(() => {if (headerMenu) setBackgroundTransparent(!headerMenu)}, [headerMenu])
+
 	return (
 		<>
 			<motion.header

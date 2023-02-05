@@ -2,7 +2,7 @@
   background-image: url('../../assets/Backgrounds/flag-01.png');
   background-repeat: no-repeat;
   background-size: cover;
-  @apply h-screen relative h-screen;
+  @apply h-screen min-h-[750px] relative;
 
   .childrenBlock {
     @apply absolute top-0 h-full w-full px-4 z-[15]
