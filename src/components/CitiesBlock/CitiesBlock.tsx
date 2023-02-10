@@ -1,20 +1,21 @@
 import React, { FC } from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-
 import s from './CitiesBlock.module.scss';
 
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
+import Image from "next/image";
 import Help1 from '../../assets/Slider/1.png';
 import Help2 from '../../assets/Slider/2.png';
 import Help3 from '../../assets/Slider/3.png';
 import Help4 from '../../assets/Slider/4.png';
 import Help5 from '../../assets/Slider/5.png';
 import Help6 from '../../assets/Slider/6.png';
-import Image from "next/image";
 
 interface CitiesBlockProps {
 	children: React.ReactNode | null;
 }
+
 const CitiesBlock: FC<CitiesBlockProps> = ({children}) => {
 
 	const arrowPrev = (onCLickHandler: (event: React.MouseEvent<HTMLDivElement>) => void) => {

@@ -4,8 +4,8 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 
 interface MainContainerProps {
-    children: React.ReactNode | null;
-    keywords: string;
+    children: React.ReactNode;
+    keywords: string | null;
     title: string;
     transparentHeader: boolean;
 }

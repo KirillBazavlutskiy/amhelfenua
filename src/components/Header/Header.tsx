@@ -1,6 +1,5 @@
-import {FC, useEffect, useRef, useState} from 'react';
+import {FC, useEffect, useRef, useState} from 'react'
 
-import { CSSTransition } from 'react-transition-group';
 import {motion, useScroll} from "framer-motion";
 
 import s from './Header.module.scss';
